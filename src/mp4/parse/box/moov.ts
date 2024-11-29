@@ -2,7 +2,14 @@ import { readBox } from "..";
 import { mvhdBox, MvhdBox } from "./mvhd"
 
 export type MoovBox = {
-    mvhd: MvhdBox;
+    mvhd: MvhdBox; // movie header
+    // prfl?: ProfileBox; // profile
+    // clip?: ClipBox; // movie clipping
+    // trak?: TrakBox[]; // track
+    // udta?: UdtaBox; // user data
+    // ctab?: CtabBox; // color table
+    // cmov?: CmovBox; // compressed movie
+    // rmra?: RmraBox; // reference movie record
 }
 
 export const moovBox = (buffer: Buffer): MoovBox => {
